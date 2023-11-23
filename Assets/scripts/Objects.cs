@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class Objects : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject tetriminosI;
+    public GameObject tetriminosJ;
+    public GameObject tetriminosL;
+    public GameObject tetriminosO;
+    public GameObject tetriminosS;
+    public GameObject tetriminosT;
+    public GameObject tetriminosZ;
 
-    // Update is called once per frame
-    void Update()
+    public GameObject GetRandomTetriminos()
     {
-        
+        System.Random random = new System.Random();
+        int randomNumber = random.Next(0,7);
+
+        switch (randomNumber)
+        {
+            case 0:
+                return tetriminosI;
+            case 1:
+                return tetriminosJ;
+            case 2:
+                return tetriminosL;
+            case 3:
+                return tetriminosO;
+            case 4:
+                return tetriminosS;
+            case 5:
+                return tetriminosT;
+            default:
+                return tetriminosZ;
+        }
     }
 }
