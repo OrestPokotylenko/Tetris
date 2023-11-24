@@ -19,6 +19,6 @@ public class Game : MonoBehaviour
     {
         Objects newObject = GetComponent<Objects>();
 
-        Instantiate(newObject.GetRandomTetriminos(), new Vector3(0f, 0f, 0f), Quaternion.identity);
+        Instantiate(newObject.GetRandomTetriminos(), new Vector3(-0.5f, 0f, 0f), Quaternion.identity);
     }
 }
